@@ -3,7 +3,11 @@
     "use": {
         "jcr:primaryType": "nt:unstructured",
         "sling:resourceType": "/apps/sightly/scripts/use",
-        "jcr:title": "SUCCESS"
+        "jcr:title": "SUCCESS",
+        "child": {
+            "jcr:primaryType": "nt:unstructured",,
+            "property": "SUCCESS"
+        }
     },
     "resource": {
         "jcr:primaryType": "nt:unstructured",

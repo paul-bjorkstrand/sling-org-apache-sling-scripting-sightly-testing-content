@@ -18,27 +18,18 @@
  ******************************************************************************/
 package org.apache.sling.scripting.sightly.testing.models;
 
-import javax.inject.Inject;
-import javax.inject.Named;
-
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Model;
 
+import javax.inject.Inject;
+
 @Model(adaptables = Resource.class)
-public class ResourceModel {
+public class ResourceAdaptableModel {
 
     @Inject
-    @Named("jcr:title")
-    private String title;
+    private String property;
 
-    @Inject
-    private Resource child;
-
-    public String getTitle() {
-        return title != null ? title : "FAILED";
-    }
-
-    public Resource getChild() {
-        return child;
+    public String getProperty() {
+        return property != null ? property : "FAILED";
     }
 }

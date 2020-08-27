@@ -23,6 +23,7 @@
     </head>
     <body data-sly-use.reqmodel="${'org.apache.sling.scripting.sightly.testing.models.RequestModel' @ argument='SUCCESS'}"
           data-sly-use.resmodel="org.apache.sling.scripting.sightly.testing.models.ResourceModel"
+          data-sly-use.resmodeladapt="${org.apache.sling.scripting.sightly.testing.models.ResourceAdaptableModel @ adaptable=resmodel.child'}"
           data-sly-use.reqadapt="org.apache.sling.scripting.sightly.testing.adaptable.RequestAdapterUseObject"
           data-sly-use.resadapt="org.apache.sling.scripting.sightly.testing.adaptable.ResourceAdapterUseObject"
           data-sly-use.rradapt="${'org.apache.sling.scripting.sightly.testing.adaptable.ResourceResolverAdapterUseObject' @ adaptable = request.resourceResolver}"
@@ -33,6 +34,7 @@
         <div id="reqmodel-reqarg">${reqmodel.requestArgument}</div>
         <div id="reqmodel-bindings">${reqmodel.getJCRType}</div>
         <div id="resmodel">${resmodel.title}</div>
+        <div id="resmodel">${resmodeladapt.property}</div>
         <div id="reqadapt">${reqadapt.title}</div>
         <div id="resadapt">${resadapt.title}</div>
         <div id="osgi">${osgi.sayHello}</div>
